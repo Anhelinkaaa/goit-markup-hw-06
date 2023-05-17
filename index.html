@@ -333,18 +333,21 @@
       </div>
 
         <form class="subscribe_form">
-        <label class="subscribe_wraper">Subscribe
+        <p class="subscribe_text">Subscribe</p>
+
+      <div class="sub-space">
+        <label class="subscribe_wraper">
         <input class="subscribe_email" type="email" name="subscribe_email" placeholder="Email">
         </label>
+        
 
-        <div class="subscribe_button">
-          <button class="subscribe_btn" type="submit">Subscribe
-            <svg class="btn-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-subscribe_icon"></use>
-            </svg>
-          </button>
-          
-        </div>
+        <button class="subscribe_btn" type="submit">Subscribe
+          <svg class="btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-subscribe_icon"></use>
+          </svg>
+        </button>
+      </div>
+
         </form>
       </div>
     </footer>
@@ -391,13 +394,13 @@
           <label class="modal_space" for="modal_comment">Comment
           <textarea class="comment_window" name="modal_comment" id="modal_comment" rows="6" placeholder="Text input" ></textarea>
           </label>
-
+          </div>
 
           <label class="agreement">
             <input class="form-check-inp"  type="checkbox" name="modal_agreement">
             <span class="text_agreement">I accept the terms and conditions of the <a class="agreement_accent" href="">Privacy Policy</a></span>
           </label>
-          </div>
+         
 
           <button class="main-btn" type="submit">Send</button>
 

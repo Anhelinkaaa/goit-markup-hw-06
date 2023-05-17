@@ -135,7 +135,6 @@ align-items: center;
 
 .nav-list-item {
   position: relative;
-  /* color: #404bbf; */
 }
 
 .nav-list-item::after {
@@ -148,6 +147,10 @@ align-items: center;
     height: 4px;
     bottom: -1px;
     border-radius: 2px;
+}
+
+.active {
+  color: #404bbf;
 }
 
 .active::after {
@@ -634,7 +637,7 @@ transition-property: ;
   top: 50%;
 
   width: 408px;
-  min-height: 576px;
+  height: 584px;
 
   transform: translate(-50%, -50%);
 
@@ -642,6 +645,7 @@ transition-property: ;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px;
 }
 
 .modal-close-btn {
@@ -687,16 +691,15 @@ fill: #ffffff;
     letter-spacing: 0.02em;
     color: #2E2F42;
     text-align: center;
-    margin-top: 72px;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-bottom: 16px;
 }
 
 .modal_contact_inf {
-  margin: 16px 24px;
+  /* margin: 16px 24px; */
   display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 24px;
 }
 
 .modal_space {
@@ -707,7 +710,7 @@ fill: #ffffff;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
     color: #8E8F99;
 }
 
@@ -719,9 +722,18 @@ fill: #ffffff;
   padding-left: 38px;
   margin-top: 4px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
 }
 
+.modal_space:focus-within>.modal_wind {
+  border: 1px solid #4D5AE5;
+
+}
+
+.icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .modal_space:focus-within > .icon {
   /* border: 1px solid #4D5AE5; */
   fill: #404BBF;
@@ -731,14 +743,14 @@ fill: #ffffff;
 .modal_icon_name {
   position: absolute;
   bottom: 11px;
-  left: 16px;
+  left: 18px;
   fill: rgba(46, 47, 66, 1);
   transform: translate(-50%);
 }
 .modal_icon_phone {
   position: absolute;
     bottom: 8px;
-    left: 16px;
+    left: 18px;
     fill: rgba(46, 47, 66, 1);
     transform: translate(-50%);
 }
@@ -746,13 +758,15 @@ fill: #ffffff;
 .modal_icon_email {
   position: absolute;
   bottom: 8px;
-  left: 16px;
+  left: 18px;
   fill: rgba(46, 47, 66, 1);
   transform: translate(-50%);
 }
 
 .comment_window {
   width: 100%;
+  height: 120px;
+  resize: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding-top: 8px;
@@ -764,8 +778,8 @@ fill: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 16px;
-  padding-bottom: 24px;
+  /* padding-top: 16px; */
+  margin-bottom: 24px;
 }
 .text_agreement {
   font-family: 'Roboto';
@@ -838,29 +852,37 @@ fill: #ffffff;
 /* Subscribe email */
 .subscribe_form {
   display: flex;
-  align-items: flex-end;
-  gap: 24px;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
   margin-left: 80px;
 }
 
+.subscribe_text {
+width: 264px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.sub-space {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
 .subscribe_wraper {
   display: flex;
   gap: 16px;
   flex-direction: column;
-  width: 264px;
-  font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
- 
   
 }
 
 .subscribe_email {
-  width: 100%;
+  width: 264px;
   height: 40px;
   background-color: transparent;
   border: 1px solid #FFFFFF;
@@ -869,9 +891,6 @@ fill: #ffffff;
     padding: 8px 212px 8px 12px;
 }
 
-.subscribe_button {
-  position: relative;
-}
 
 .subscribe_btn {
   display: block;
